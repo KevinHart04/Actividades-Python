@@ -58,11 +58,15 @@ def Romano_a_decimal(romano):
     return convertir(0)
 
 
+def main():
+    entrada = input(colores.color("[*] Ingresa un numero romano: ", colores.VERDE))
+    try:
+        resultado = Romano_a_decimal(entrada)
+        print(colores.color(f"[*] El numero romano ingresado en decimal es '{resultado}'", colores.AMARILLO))
+    except ValueError as e:
+        print(colores.color(f"Error: '{e}'", colores.ROJO))
+        
 
-entrada = input(colores.color("[*] Ingresa un numero romano: ", colores.VERDE))
-try:
-    resultado = Romano_a_decimal(entrada)
-    print(colores.color(f"[*] El numero romano ingresado en decimal es '{resultado}'", colores.AMARILLO))
-except ValueError as e:
-    print(colores.color(f"Error: '{e}'", colores.ROJO))
-    
+if __name__ == "__main__":
+    main()
+        
